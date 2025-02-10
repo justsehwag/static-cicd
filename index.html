@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .clouds {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .cloud {
+            background: white;
+            color: #0072ff;
+            padding: 20px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .cloud:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 30px;
+            transition: opacity 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cloud Computing Services</h1>
+        <div class="clouds">
+            <div class="cloud" onclick="showInfo('Storage')">☁️ Storage</div>
+            <div class="cloud" onclick="showInfo('Compute')">☁️ Compute</div>
+            <div class="cloud" onclick="showInfo('Networking')">☁️ Networking</div>
+        </div>
+        <p id="info">Click on a cloud service to learn more.</p>
+    </div>
+    <script>
+        function showInfo(service) {
+            const info = document.getElementById('info');
+            const details = {
+                'Storage': 'Cloud storage allows you to store and retrieve data anytime, anywhere.',
+                'Compute': 'Cloud computing provides scalable and flexible computing power.',
+                'Networking': 'Cloud networking enables secure and fast connectivity.'
+            };
+            info.textContent = details[service];
+            info.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>
