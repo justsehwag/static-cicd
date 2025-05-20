@@ -3,229 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cloud Engineer Dashboard</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>Modern Landing Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
-        /* ...existing styles... */
-        .big-bold-name {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #ffb300;
-            text-align: center;
-            margin: 32px 0 12px 0;
-            letter-spacing: 2px;
-            text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #2980b9, #6dd5fa, #ffffff);
+            min-height: 100vh;
+            color: #222;
         }
-        @media (max-width: 600px) {
-            .big-bold-name {
-                font-size: 2rem;
+        header {
+            background: rgba(255,255,255,0.9);
+            padding: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #1a5276;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #2980b9;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: #444;
+        }
+        .cta-btn {
+            background: #2980b9;
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-shadow: 0 4px 12px rgba(41,128,185,0.15);
+        }
+        .cta-btn:hover {
+            background: #1a5276;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 60px 0;
+            padding: 0 20px;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(41,128,185,0.08);
+            padding: 30px 25px;
+            max-width: 320px;
+            flex: 1 1 250px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px) scale(1.03);
+        }
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+        .newsletter {
+            background: #f7fafd;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 16px;
+            max-width: 500px;
+            margin: 0 auto 60px auto;
+            box-shadow: 0 2px 8px rgba(41,128,185,0.07);
+        }
+        .newsletter input[type="email"] {
+            padding: 12px;
+            border: 1px solid #b2bec3;
+            border-radius: 25px;
+            width: 60%;
+            max-width: 250px;
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+        .newsletter button {
+            padding: 12px 28px;
+            border: none;
+            border-radius: 25px;
+            background: #2980b9;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .newsletter button:hover {
+            background: #1a5276;
+        }
+        .success-message {
+            color: #27ae60;
+            margin-top: 15px;
+            font-weight: bold;
+            display: none;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #f2f6fa;
+            color: #888;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 900px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="big-bold-name"><b>PURUSOTHAMAN POTTA</b></div>
-    <div class="dashboard-header">
-        <h1>
-            <i class="bi bi-cloud"></i>
-            Cloud Engineer Dashboard
-        </h1>
-        <p>Monitor, manage, and automate your cloud resources with ease.</p>
-    </div>
-    <!-- ...rest of your code remains unchanged... -->
-    <div class="dashboard-container">
-        <div class="cloud-visual">
-            <svg viewBox="0 0 220 120">
-                <ellipse cx="80" cy="60" rx="70" ry="38" fill="#fff" opacity="0.7"/>
-                <ellipse cx="140" cy="60" rx="60" ry="30" fill="#fff" opacity="0.5"/>
-                <ellipse cx="110" cy="80" rx="80" ry="25" fill="#fff" opacity="0.3"/>
-            </svg>
+    <header>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#newsletter">Newsletter</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Welcome to Your Product</h1>
+        <p>Discover the next generation solution for your business. Fast, reliable, and easy to use.</p>
+        <button class="cta-btn" onclick="scrollToFeatures()">Learn More</button>
+    </section>
+    <section class="features" id="features">
+        <div class="feature-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Fast Performance</h3>
+            <p>Lightning-fast load times and seamless experience for your users.</p>
         </div>
-        <div class="stats-cards">
-            <div class="stat-card">
-                <i class="bi bi-hdd-network"></i>
-                <h2 id="stat-instances">3</h2>
-                <p>Active Instances</p>
-            </div>
-            <div class="stat-card">
-                <i class="bi bi-cloud-upload"></i>
-                <h2 id="stat-deploys">12</h2>
-                <p>Deployments</p>
-            </div>
-            <div class="stat-card">
-                <i class="bi bi-graph-up-arrow"></i>
-                <h2 id="stat-uptime">99.99%</h2>
-                <p>Uptime</p>
-            </div>
-            <div class="stat-card">
-                <i class="bi bi-people"></i>
-                <h2 id="stat-users">3</h2>
-                <p>Team Members</p>
-            </div>
+        <div class="feature-card">
+            <i class="fas fa-lock"></i>
+            <h3>Secure</h3>
+            <p>Top-notch security to keep your data and users safe at all times.</p>
         </div>
-        <form class="crud-form" id="crud-form" autocomplete="off">
-            <input type="hidden" id="edit-index" value="">
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <select id="role" required>
-                <option value="">Role</option>
-                <option>Cloud Admin</option>
-                <option>DevOps</option>
-                <option>Developer</option>
-                <option>Security</option>
-            </select>
-            <button type="submit" id="submit-btn"><i class="bi bi-plus-circle"></i> Add</button>
+        <div class="feature-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Mobile Friendly</h3>
+            <p>Responsive design that looks great on any device, anywhere.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-cogs"></i>
+            <h3>Customizable</h3>
+            <p>Easily adapt and extend features to fit your unique needs.</p>
+        </div>
+    </section>
+    <section class="newsletter" id="newsletter">
+        <h2>Subscribe to our Newsletter</h2>
+        <form id="newsletterForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+            <div class="success-message" id="successMsg">Thank you for subscribing!</div>
         </form>
-        <table class="dashboard-table" id="dashboard-table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th><i class="bi bi-person"></i> Name</th>
-                    <th><i class="bi bi-envelope"></i> Email</th>
-                    <th><i class="bi bi-person-badge"></i> Role</th>
-                    <th><i class="bi bi-gear"></i> Actions</th>
-                </tr>
-            </thead>
-            <tbody id="dashboard-tbody">
-                <!-- Data rows go here -->
-            </tbody>
-        </table>
-        <div class="activity-feed">
-            <h3><i class="bi bi-lightning-charge"></i> Recent Activity</h3>
-            <ul class="activity-list" id="activity-list">
-                <li><i class="bi bi-check-circle"></i> Alice Johnson deployed<b>web-app</b> to <b>us-east-1</b></li>
-                <li><i class="bi bi-shield-lock"></i> Carol Lee updated IAM policies</li>
-                <li><i class="bi bi-hdd-stack"></i> Bob Smith launched new EC2 instance</li>
-            </ul>
-        </div>
-    </div>
-    <!-- Modal for feedback -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <button class="close-modal" id="close-modal">&times;</button>
-            <h2 id="modal-title"></h2>
-            <p id="modal-msg"></p>
-            <button class="modal-btn" id="modal-btn">OK</button>
-        </div>
-    </div>
+    </section>
+    <footer id="contact">
+        &copy; 2024 Your Product. All rights reserved.
+    </footer>
     <script>
-        // ...existing JS code remains unchanged...
-        let data = [
-            {name: "Alice Johnson", email: "alice@example.com", role: "Cloud Admin"},
-            {name: "Bob Smith", email: "bob@example.com", role: "Developer"},
-            {name: "Carol Lee", email: "carol@example.com", role: "Security"}
-        ];
-
-        const tbody = document.getElementById('dashboard-tbody');
-        const form = document.getElementById('crud-form');
-        const nameInput = document.getElementById('name');
-        const emailInput = document.getElementById('email');
-        const roleInput = document.getElementById('role');
-        const editIndexInput = document.getElementById('edit-index');
-        const submitBtn = document.getElementById('submit-btn');
-        const modal = document.getElementById('modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalMsg = document.getElementById('modal-msg');
-        const closeModalBtn = document.getElementById('close-modal');
-        const modalBtn = document.getElementById('modal-btn');
-        const statUsers = document.getElementById('stat-users');
-        const activityList = document.getElementById('activity-list');
-
-        function renderTable() {
-            tbody.innerHTML = '';
-            data.forEach((row, i) => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${i+1}</td>
-                    <td>${row.name}</td>
-                    <td>${row.email}</td>
-                    <td>${row.role}</td>
-                    <td>
-                        <button class="action-btn edit-btn" onclick="editRow(${i})"><i class="bi bi-pencil"></i> Edit</button>
-                        <button class="action-btn delete-btn" onclick="deleteRow(${i})"><i class="bi bi-trash"></i> Delete</button>
-                    </td>
-                `;
-                tbody.appendChild(tr);
-            });
-            statUsers.textContent = data.length;
+        function scrollToFeatures() {
+            document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
         }
 
-        form.onsubmit = function(e) {
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const name = nameInput.value.trim();
-            const email = emailInput.value.trim();
-            const role = roleInput.value;
-            if (!name || !email || !role) return;
-            const idx = editIndexInput.value;
-            if (idx === "") {
-                data.push({name, email, role});
-                addActivity(`${name} joined as <b>${role}</b>`);
-                showModal("Added!", "User added successfully.");
+            var email = document.getElementById('email').value;
+            var successMsg = document.getElementById('successMsg');
+            if (validateEmail(email)) {
+                successMsg.style.display = 'block';
+                setTimeout(function() {
+                    successMsg.style.display = 'none';
+                }, 3000);
+                document.getElementById('newsletterForm').reset();
             } else {
-                const old = data[idx];
-                data[idx] = {name, email, role};
-                addActivity(`${old.name} updated to <b>${name}</b> (${role})`);
-                showModal("Updated!", "User updated successfully.");
+                alert('Please enter a valid email address.');
             }
-            form.reset();
-            editIndexInput.value = "";
-            submitBtn.innerHTML = '<i class="bi bi-plus-circle"></i> Add';
-            renderTable();
-        };
+        });
 
-        window.editRow = function(i) {
-            const row = data[i];
-            nameInput.value = row.name;
-            emailInput.value = row.email;
-            roleInput.value = row.role;
-            editIndexInput.value = i;
-            submitBtn.innerHTML = '<i class="bi bi-arrow-repeat"></i> Update';
-        };
-
-        window.deleteRow = function(i) {
-            showModal("Confirm Delete", `Are you sure you want to delete <b>${data[i].name}</b>?`, true, () => {
-                addActivity(`${data[i].name} was removed from the team`);
-                data.splice(i, 1);
-                renderTable();
-                showModal("Deleted!", "User deleted successfully.");
-            });
-        };
-
-        function showModal(title, msg, confirm = false, onConfirm = null) {
-            modalTitle.innerHTML = title;
-            modalMsg.innerHTML = msg;
-            modal.style.display = 'flex';
-            if (confirm) {
-                modalBtn.textContent = "Delete";
-                modalBtn.style.background = "linear-gradient(90deg, #ff5252 0%, #ffb300 100%)";
-                modalBtn.onclick = function() {
-                    modal.style.display = 'none';
-                    if (onConfirm) onConfirm();
-                };
-            } else {
-                modalBtn.textContent = "OK";
-                modalBtn.style.background = "";
-                modalBtn.onclick = function() {
-                    modal.style.display = 'none';
-                };
-            }
+        function validateEmail(email) {
+            var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
         }
-        closeModalBtn.onclick = () => modal.style.display = 'none';
-        modal.onclick = function(e) {
-            if (e.target === modal) modal.style.display = 'none';
-        };
-
-        function addActivity(msg) {
-            const li = document.createElement('li');
-            li.innerHTML = `<i class="bi bi-lightning-charge"></i> ${msg}`;
-            activityList.insertBefore(li, activityList.firstChild);
-            while (activityList.children.length > 8) {
-                activityList.removeChild(activityList.lastChild);
-            }
-        }
-
-        renderTable();
     </script>
 </body>
 </html>
